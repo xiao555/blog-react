@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import './App.css';
+import ProgressBar from './components/ProgressBar'
+import Sidebar from './components/Sidebar'
+import Home from './views/Home'
+import Post from './views/Post'
+import About from './views/About'
 
-function App() {
+export default function App() {
+  // const { execute, pending, value, error } = useAsync(fetchArticles, true)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+    <Router>
+      <div className='app'>
+        <ProgressBar/>
+        <main className='main'>
+          <Sidebar/>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/post/:id" component={Post}/>
+            <Route path="/about" component={About}/>
+          </Switch>
+        </main>
+      </div>
+    </Router>
+  )
+};

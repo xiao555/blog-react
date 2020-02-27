@@ -1,22 +1,78 @@
-.App {
-  text-align: center;
+.app {
+  margin: 6px 40px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.progress-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  z-index: 9999;
 }
 
-.App-link {
-  color: #09d3ac;
+.progress-bar div {
+  flex: 1;
+}
+
+.post-list-item {
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.post-list-item:hover {
+  background-color: var(--list-hover-background-color);
+  transition: all 0.3s ease-in;
+}
+
+.post-list-item-info {
+  flex: 0 0 60%;
+}
+
+.post-list-item-info h2 {
+  margin-top: 0;
+}
+
+.post-list-item-thumb-wrapper {
+  flex: 0 0 40%;
+  width: 40%;
+  padding: 20px;
+  max-width: 250px;
+  max-height: 250px;
+  align-self: center;
+}
+
+.post-list-item-thumb {
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  background-size: cover;
+}
+
+article img {
+  width: 100%;
+  max-width: 800px;
+}
+article pre code {
+  display: block;
+  color: #ddd;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #444;
+  white-space: pre-wrap;
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .main {
+    padding-left: 300px;
+  }
+  .sidebar {
+    width: 300px;
+    position: fixed;
+    left: 40px;
+    top: 6px;
+    bottom: 0;
+  }
 }
