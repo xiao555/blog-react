@@ -10,9 +10,11 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "source-map-explorer": "^2.3.1"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -b master -d build -r https://github.com/xiao555/xiao555.github.io.git",
     "start": "react-scripts start",
