@@ -22,7 +22,6 @@ function BackToTop () {
 }
 
 export default function App() {
-  // const { execute, pending, value, error } = useAsync(fetchArticles, true)
   const [scrollTop] = useScroll()
 
   return (

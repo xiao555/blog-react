@@ -1,0 +1,35 @@
+.post-list-item {
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.post-list-item:hover {
+  background-color: var(--list-hover-background-color);
+  transition: all 0.3s ease-in;
+}
+
+.post-list-item-info {
+  flex: 0 0 60%;
+  word-break: break-all;
+}
+
+.post-list-item-info h2 {
+  margin-top: 0;
+}
+
+.post-list-item-thumb-wrapper {
+  flex: 0 0 40%;
+  width: 40%;
+  padding: 20px;
+  max-width: 250px;
+  max-height: 250px;
+  align-self: center;
+}
+
+.post-list-item-thumb {
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  background-size: cover;
+}

@@ -16,6 +16,7 @@ export default (queries, values, defaultValue) => {
       mediaQueryLists.forEach(mql => mql.addListener(handler))
       return () => mediaQueryLists.forEach(mql => mql.removeListener(handler))
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   )
 
