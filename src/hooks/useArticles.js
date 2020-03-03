@@ -8,6 +8,7 @@ let refresh = false
 
 const useArticles = () => {
   const [articles, setArticles] = useLocalStorage('articles', cache)
+
   if (!refresh) {
     refresh = true
     fetch(url)
@@ -25,8 +26,8 @@ const useArticles = () => {
 }
 
 const useArticle = (id) => {
-  const [article, setArticle] = useState(null)
   const { articles } = useArticles()
+  const [article, setArticle] = useState(articles ? articles.find(_ => _.id === id) : null)
 
   useEffect(() => {
     if (articles) {
