@@ -7,6 +7,11 @@ import useDarkMode from '../hooks/useDarkMode'
 export default function Sidebar () {
   const [enabled, enableDarkMode] = useDarkMode()
 
+  const birthDay = 1583224596000
+  const now = new Date()
+  const duration = now.getTime() - birthDay
+  const total = Math.floor(duration / (1000 * 60 * 60 * 24));
+
   return (
     <div className='sidebar text-left'>
       <h1>
@@ -20,6 +25,7 @@ export default function Sidebar () {
       <p className='font-sm'>
         <a href='mailto:zhangruiwu32@gmail.com'>zhangruiwu32@gmail.com</a>
       </p>
+      <p><small>本站已存活 { total } 天</small></p>
       <button className='border-0 px-0' onClick={() => enableDarkMode(!enabled)}>
         {
           enabled ? <i className='fas fa-sun'></i> : <i className='fas fa-moon'></i>
