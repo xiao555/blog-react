@@ -13,7 +13,9 @@ const useScrollHistory = () => {
       historyMap[location.pathname] = scrollTop
       window.localStorage.setItem('scroll-history', JSON.stringify(historyMap))
     }
-  })
+  // 传入空数组，模拟componentDidMount，componentWillUnmount
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 }
 
 export { useScrollHistory }
