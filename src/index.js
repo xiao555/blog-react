@@ -4,6 +4,8 @@ import './index.css';
 import 'highlight.js/styles/dark.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// Register AV objects to the global
+window.AV = require('leancloud-storage');
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

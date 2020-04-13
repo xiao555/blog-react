@@ -189,6 +189,10 @@ a:hover {
   padding-right: 0;
 }
 
+/* Margin */
+.ml-1 {
+  margin-left: 1rem;
+}
 
 /* Button */
 button {
