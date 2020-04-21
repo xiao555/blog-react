@@ -38,5 +38,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "gray-matter": "^4.0.2",
+    "inquirer": "^7.1.0",
+    "node-fetch": "^2.6.0",
+    "prerender-spa-plugin": "^3.4.0",
+    "react-app-rewired": "^2.1.5"
   }
 }
