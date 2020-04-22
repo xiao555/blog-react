@@ -12,6 +12,9 @@ function Post() {
 
   useScrollHistory()
 
+  useEffect(() => {
+    document.title = `${article.title} | 打开天眼看文章`
+  })
 
   useEffect(() => {
     new Valine({
@@ -22,7 +25,7 @@ function Post() {
       recordIP: true,
       path: id
     })
-  }, [])
+  }, [id])
 
   return (
     article
@@ -30,7 +33,7 @@ function Post() {
           <h2>{ article.title }</h2>
           <p>
             <small>{ getLocalYearMonthDay(article.createDate) }</small>
-            <span id={id} className='leancloud_visitors ml-1'><small>阅读量</small> <small class="leancloud-visitors-count"></small></span>
+            <span id={id} className='leancloud_visitors ml-1'><small>阅读量</small> <small className="leancloud-visitors-count"></small></span>
           </p>
           <section dangerouslySetInnerHTML={{ __html: article.content }}></section>
           <section id='vcomments'></section>

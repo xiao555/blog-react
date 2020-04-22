@@ -5,7 +5,13 @@ const marked = require('marked');
 const hljs   = require('highlight.js');
 const fetch  = require('node-fetch');
 const inquirer = require('inquirer');
-const articles = require('./src/articles.json')
+
+let articles
+try {
+  articles = require('./src/articles.json')
+} catch (error) {
+  articles = []
+}
 
 marked.setOptions({
   highlight: code => hljs.highlightAuto(code).value
@@ -19,7 +25,6 @@ const ghName = 'xiao555'
 const ghEmail = 'zhangruiwu32@gmail.com'
 const cdnRepoLink = 'https://api.github.com/repos/xiao555/netlify'
 const cdnLink = 'https://xiao555.netlify.com'
-const articleRepoLink = 'https://api.github.com/repos/xiao555/blog-articles'
 
 /**
  * 上传图片到github

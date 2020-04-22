@@ -19,10 +19,11 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -b master -d build -r https://github.com/xiao555/xiao555.github.io.git",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "build-data": "node ./index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
