@@ -1,27 +1,7 @@
 import { useState, useEffect } from 'react'
-import useLocalStorage from './useLocalStorage'
-
-const url = 'https://raw.githubusercontent.com/xiao555/blog-articles/master/articles.json'
-
-let cache = null
-let refresh = false
+import articles from '../articles.json'
 
 const useArticles = () => {
-  const [articles, setArticles] = useLocalStorage('articles', cache)
-
-  if (!refresh) {
-    refresh = true
-    fetch(url)
-      .then(async r => {
-        if (r.ok) {
-          setArticles(await r.json())
-          cache = articles
-        } else {
-          refresh = false
-        }
-      })
-  }
-
   return { articles }
 }
 
