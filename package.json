@@ -21,6 +21,7 @@
     "deploy": "gh-pages -b master -d build -r https://github.com/xiao555/xiao555.github.io.git",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "postbuild": "node ./postbuild.js",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "build-data": "node ./index.js"
@@ -46,6 +47,7 @@
     "inquirer": "^7.1.0",
     "node-fetch": "^2.6.0",
     "prerender-spa-plugin": "^3.4.0",
-    "react-app-rewired": "^2.1.5"
+    "react-app-rewired": "^2.1.5",
+    "react-router-sitemap": "^1.2.0"
   }
 }

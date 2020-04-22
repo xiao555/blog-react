@@ -20,7 +20,7 @@ marked.setOptions({
 const results = []
 const introTag = '--intro--'
 const thumbUrl = 'https://api.unsplash.com/photos/random?client_id=cd8f6ebac5a5ed217bc4674a5fe851f30eb6e92686b8d027adadf602048b49fa'
-const imgReg = /\!\[(.*)\]\((.*\.(jpg|jpeg|png|gif))\)/g
+const imgReg = /!\[(.*)\]\((.*\.(jpg|jpeg|png|gif))\)/g
 const ghName = 'xiao555'
 const ghEmail = 'zhangruiwu32@gmail.com'
 const cdnRepoLink = 'https://api.github.com/repos/xiao555/netlify'
@@ -91,7 +91,7 @@ async function uploadImage (name, url, ghToken) {
         let ignoreDuplicateFile = false
         let entries = Object.entries(replaceMap)
         for (let j = 0; j < entries.length; j++) {
-          const [name, { originUrl: url }] = entries[j];
+          let [name, { originUrl: url }] = entries[j];
           console.log('检测到图片: ', name, url)
           if (repoFiles.includes(name) && url.includes(cdnLink)) {
             // 已上传github且url是cdn的链接 跳过不处理
