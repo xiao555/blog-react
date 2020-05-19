@@ -127,6 +127,10 @@ a:hover {
   text-align: left;
 }
 
+.font-weight-bold {
+  font-weight: bold;
+}
+
 /* Colors */
 .text-white {
   color: var(--color-white) !important;
@@ -192,6 +196,9 @@ a:hover {
 /* Margin */
 .ml-1 {
   margin-left: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
 }
 
 /* Button */

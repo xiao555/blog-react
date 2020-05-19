@@ -56,6 +56,11 @@ article pre code {
   background: #444;
   white-space: pre-wrap;
 }
+
+.sidebar .icon {
+  font-size: 18px;
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .main {
