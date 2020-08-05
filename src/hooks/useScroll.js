@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import  useEventListener from './useEventListener'
+import debounce from 'utils/debounce'
 
 const useScroll = (element = document.documentElement) => {
   const [value, setValue] = useState(element.scrollTop)
@@ -8,7 +9,7 @@ const useScroll = (element = document.documentElement) => {
     setValue(element.scrollTop)
   }
 
-  useEventListener('scroll', handler)
+  useEventListener('scroll', debounce(handler, 200))
 
   return [value]
 }

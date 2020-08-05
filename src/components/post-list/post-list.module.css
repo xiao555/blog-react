@@ -1,0 +1,13 @@
+.listItem {
+  word-break: break-all;
+  margin-bottom: 100px;
+}
+
+.listItem h2:hover {
+  opacity: .8;
+  transition: opacity 0.3s ease-in;
+}
+
+.listItem p {
+  margin: 8px 0;
+}

@@ -1,28 +1,41 @@
-.app {
-  margin: 6px 40px 0;
+main {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 42px 21px;
+}
+h1,
+h2 {
+  margin: 0;
+  letter-spacing: 2px;
 }
 
-main {
-  padding-bottom: 40px;
+p {
+  margin: 8px 0;
+  letter-spacing: 2px;
+}
+
+#vcomments {
+  margin-top: 40px;
 }
 
 .back-to-top {
+  visibility: hidden;
   position: fixed;
   bottom: 40px;
-  right: 0px;
+  right: 40px;
   width: 40px;
   height: 40px;
   color: var(--color-green);
   text-align: center;
   cursor: pointer;
   transition: all .5s ease-out;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-radius: 50%;
+  font-size: 64px;
+  line-height: 36px;
 }
-.back-to-top i {
-  font-size: 24px;
-  line-height: 40px;
-  transform: rotateZ(-90deg);
+.back-to-top.show{
+  visibility: visible;
 }
 
 .back-to-top:hover {
@@ -55,22 +68,4 @@ article pre code {
   padding: 0.5em;
   background: #444;
   white-space: pre-wrap;
-}
-
-.sidebar .icon {
-  font-size: 18px;
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .main {
-    padding-left: 300px;
-  }
-  .sidebar {
-    width: 300px;
-    position: fixed;
-    left: 40px;
-    top: 6px;
-    bottom: 0;
-  }
 }
