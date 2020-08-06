@@ -31,7 +31,7 @@ p {
   cursor: pointer;
   transition: all .5s ease-out;
   border-radius: 50%;
-  font-size: 64px;
+  font-size: 32px;
   line-height: 36px;
 }
 .back-to-top.show{
