@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css';
+import SWUpdatePopup from 'components/sw-update-popup'
 import ProgressBar from './components/ProgressBar'
 import Header from './components/header'
 import Home from './views/Home'
@@ -37,6 +38,7 @@ export default function App() {
           </Switch>
         </main>
         <BackToTop scrollTop={scrollTop}/>
+        <SWUpdatePopup />
       </div>
     </Router>
   )

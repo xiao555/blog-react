@@ -1,0 +1,19 @@
+.wrapper {
+  position: fixed;
+  right: -100px;
+  bottom: -100px;
+  background-color: var(--color-green);
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.enable {
+  right: 10px;
+  bottom: 10px;
+}
+
+.content {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
