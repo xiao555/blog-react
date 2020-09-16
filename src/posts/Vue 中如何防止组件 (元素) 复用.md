@@ -194,7 +194,7 @@ export  default {
 ```
 有规则管理和违规管理两个上级路由，都引用了SingleRouterView组件，他们子路由中都有需要keepAlive的地方。但是页面上会有个问题，就是从rule-list跳到violation-list的时候，rule-list还会被缓存，再跳转回去的时候，缓存的组件会被激活，原来页面上的状态会被保留。但是我们想要的效果是只有列表页跳到详情页再返回的时候，需要缓存列表页之前的状态。从列表页跳到其他路由下再回来应该是一个全新的版本。
 
-![被复用的组件缓存了RulesList组件](http://tech.yuceyi.com/upload/daa2c0bc15554dff9aed856c34216666_image.png)
+![被复用的组件缓存了RulesList组件](https://xiao555.netlify.com/daa2c0bc15554dff9aed856c34216666_image.png)
 
 
 上图中可以看到从规则管理跳转到违规管理，SingleRouterView还缓存着之前规则列表组件。显然，我们的SingleRouterView被复用了。怎么解决呢？

@@ -51,7 +51,7 @@ To https://github.com/xiao555/example.git
 
 这样就表示上传完成了，回到你的github上看看吧。
 
-[![](http://ww3.sinaimg.cn/mw1024/005NJVkbjw1f1ynaltri1j30sg0ar41g.jpg)](http://ww3.sinaimg.cn/mw1024/005NJVkbjw1f1ynaltri1j30sg0ar41g.jpg)
+[![](https://xiao555.netlify.com/005NJVkbjw1f1ynaltri1j30sg0ar41g.jpg)](https://xiao555.netlify.com/005NJVkbjw1f1ynaltri1j30sg0ar41g.jpg)
 
 大功告成！咦，要是我们在本地修改了代码要同步到github上怎么办？没关系，继续下列步骤：
 
