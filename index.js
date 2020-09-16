@@ -20,8 +20,8 @@ marked.setOptions({
 const results = []
 const introTag = '--intro--'
 const thumbUrl = 'https://api.unsplash.com/photos/random?client_id=cd8f6ebac5a5ed217bc4674a5fe851f30eb6e92686b8d027adadf602048b49fa'
-const imgReg = /!\[(.*)\]\((.*\.(jpg|jpeg|png|gif))\)/g
-const imageNameReg = /^.*\.(jpg|jpeg|png|gif)$/
+const imgReg = /!\[(.*)\]\((.*\.(jpg|jpeg|png|gif|image)(\?[^)]*)?)\)/g
+const imageNameReg = /^.*\.(jpg|jpeg|png|gif|image)$/
 const ghName = 'xiao555'
 const ghEmail = 'zhangruiwu32@gmail.com'
 const cdnRepoLink = 'https://api.github.com/repos/xiao555/netlify'
@@ -84,7 +84,7 @@ async function uploadImage (name, url, ghToken) {
         const replaceMap = {}
         content.replace(imgReg, (match, name, url) => {
           // 图片名称没有的默认用链接最后一项
-          if (!imageNameReg.test(name)) name = url.split('/').pop()
+          if (!imageNameReg.test(name)) name = url.split('/').pop().split('?')[0]
           replaceMap[name] = {
             originUrl: url
           }
@@ -99,7 +99,7 @@ async function uploadImage (name, url, ghToken) {
             continue
           } else {
             let needUpload = true
-            let ext = url.match(/\.(jpg|jpeg|png|gif)/)[1]
+            let ext = url.match(/\.(jpg|jpeg|png|gif|image)/)[1]
             // 如果github存在同名文件，询问是否跳过或重命名
             if (repoFiles.includes(name)) {
               // 全部跳过
